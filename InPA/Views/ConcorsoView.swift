@@ -24,7 +24,10 @@ struct ConcorsoDetailsView: View {
                 let sendApplicationUrl = details.linkReindirizzamento ?? "https://portale.inpa.gov.it/ui/public-area/login?returnUrl=%2Fpublic-area%2Fconcoursedetail%2F\(id)"
 
                 List {
-                    Text(details.descrizioneBreve)
+                    Section("Descrizione") {
+                        Text(details.descrizioneBreve)
+                    }
+
                     LabeledContent("Area geografica", value: details.expandedLocationFormatted)
                     LabeledContent("Valutazione", value: details.tipoProcedura.displayName())
                     LabeledContent("Stato", value: details.calculatedStatus.displayName())
