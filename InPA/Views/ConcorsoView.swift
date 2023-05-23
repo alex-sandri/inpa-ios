@@ -90,6 +90,9 @@ struct ConcorsoDetailsView: View {
                 ProgressView()
             }
         }
+        .refreshable {
+            await getDetails()
+        }
         .task {
             await getDetails()
         }
