@@ -37,7 +37,6 @@ struct HomeView: View {
 
     var body: some View {
         NavigationStack {
-            // TODO: Load more results if not last page
             // TODO: Show message if empty results
             List {
                 if let concorsi {
