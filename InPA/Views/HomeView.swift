@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// TODO: Avoid refreshing the view every time the returns to this page via navigation
 struct HomeView: View {
     @State private var query: String = ""
     @State private var filters: Filters = Filters()
@@ -112,7 +113,7 @@ struct HomeView: View {
                 }
             }
             .task {
-               await getConcorsi()
+                await getConcorsi(reset: true)
             }
         }
     }
