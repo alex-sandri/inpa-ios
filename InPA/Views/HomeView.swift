@@ -44,7 +44,7 @@ struct HomeView: View {
                     Text("Trovati **\(concorsi.totalElements)** risultati")
                         .font(.caption)
                         .foregroundColor(.secondary)
-                        .listRowBackground(Color.clear)
+
                     ForEach(concorsi.content) { concorso in
                         NavigationLink {
                             ConcorsoDetailsView(id: concorso.id)
@@ -71,9 +71,10 @@ struct HomeView: View {
                         ProgressView()
                         Spacer()
                     }
-                    .listRowBackground(Color.clear)
                 }
             }
+            .listStyle(.grouped)
+            .scrollContentBackground(.hidden)
             .refreshable {
                 await getConcorsi()
             }
