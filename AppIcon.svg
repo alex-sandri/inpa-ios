@@ -203,11 +203,16 @@
    d="m 19.241,25.284 c -0.247,0 -0.215,-0.186 -0.215,-0.46 v -0.826 c 0,-0.244 -0.032,-0.367 0.183,-0.367 v -0.092 h -0.704 v 0.092 c 0.215,0 0.215,0.122 0.215,0.367 v 0.95 c 0,0.243 0,0.366 -0.215,0.366 v 0.123 h 1.194 l 0.031,-0.552 h -0.094 c -0.06,0.305 -0.151,0.399 -0.395,0.399 z"
    id="path1241"
    style="fill:#ffffff;fill-opacity:1" />
-</g><text
-       xml:space="preserve"
+</g><g
+       aria-label="inPA"
        transform="matrix(0.26458333,0,0,0.26458333,-4.716286,-57.170504)"
        id="text1891"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:266.667px;line-height:1.25;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Bold';white-space:pre;shape-inside:url(#rect1893);display:inline;fill:#ffffff;fill-opacity:1;stroke:none"><tspan
-         x="259.42578"
-         y="1052.7444"
-         id="tspan2568">inPA</tspan></text></g></svg>
+       style="font-weight:bold;font-size:266.667px;line-height:1.25;font-family:'Titillium Web';-inkscape-font-specification:'Titillium Web Bold';white-space:pre;shape-inside:url(#rect1893);display:inline;fill:#ffffff"><path
+         d="M 275.95913,1052.7444 V 919.4109 h 35.73338 v 133.3335 z m 0,-150.40019 V 866.0775 h 35.73338 v 36.26671 z"
+         id="path195" /><path
+         d="M 380.49244,1052.7444 H 344.75906 V 919.4109 h 35.46671 v 7.46667 q 18.13336,-10.66668 33.33338,-10.66668 26.66669,0 36.80004,15.73336 10.13335,15.73335 10.13335,48.53339 v 72.26676 h -35.73338 v -71.20009 q 0,-17.06669 -4.00001,-25.0667 -4,-8.26668 -16.00002,-8.26668 -10.93334,0 -21.06669,3.73334 l -3.2,1.06667 z"
+         id="path197" /><path
+         d="m 562.09252,999.94433 h -29.8667 v 52.80007 H 495.42577 V 871.41084 h 66.66675 q 64.53341,0 64.53341,62.93341 0,31.73337 -16.53335,48.80006 -16.26669,16.80002 -48.00006,16.80002 z m -29.8667,-31.46671 h 29.60003 q 27.4667,0 27.4667,-34.13337 0,-16.80002 -6.66667,-24.00003 -6.66668,-7.46668 -20.80003,-7.46668 h -29.60003 z"
+         id="path199" /><path
+         d="m 632.22536,1052.7444 40.80005,-181.33356 h 69.86675 l 40.80005,181.33356 h -36.80005 l -7.20001,-32.8 h -63.46674 l -7.20001,32.8 z m 69.33341,-150.93353 -18.40002,86.13344 h 49.60006 l -18.40002,-86.13344 z"
+         id="path201" /></g></g></svg>
