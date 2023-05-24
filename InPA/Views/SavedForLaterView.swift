@@ -20,6 +20,15 @@ struct SavedForLaterView: View {
                                 ConcorsoDetailsView(id: savedForLater.id)
                             } label: {
                                 Text(savedForLater.wrappedValue.titolo)
+                                    .swipeActions {
+                                        Button(role: .destructive) {
+                                            Task {
+                                                try await savedForLaterStore.remove(id: savedForLater.id)
+                                            }
+                                        } label: {
+                                            Label("Rimuovi", systemImage: "trash.fill")
+                                        }
+                                    }
                             }
                         }
                     }
