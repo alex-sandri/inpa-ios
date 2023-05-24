@@ -116,6 +116,14 @@ struct HomeView: View {
                 .sheet(isPresented: $showFilters) {
                     HomeFiltersView(filters: $filters)
                 }
+                NavigationLink {
+                    SavedForLaterView()
+                } label: {
+                    Label(
+                        "Salvati per dopo",
+                        systemImage: "bookmark"
+                    )
+                }
             }
             .task {
                 await getConcorsi(reset: true)
@@ -127,5 +135,12 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .task {
+                do {
+                    try await SavedForLaterStore.shared.load()
+                } catch {
+                    fatalError(error.localizedDescription)
+                }
+            }
     }
 }

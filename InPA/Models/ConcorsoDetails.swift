@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ConcorsoDetails: Codable {
+struct ConcorsoDetails: Codable, Identifiable {
     let id: String
     let codice: String
     let titolo: String

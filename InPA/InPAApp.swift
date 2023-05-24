@@ -12,6 +12,13 @@ struct InPAApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .task {
+                    do {
+                        try await SavedForLaterStore.shared.load()
+                    } catch {
+                        fatalError(error.localizedDescription)
+                    }
+                }
         }
     }
 }

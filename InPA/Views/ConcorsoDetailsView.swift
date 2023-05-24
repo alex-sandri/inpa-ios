@@ -12,6 +12,8 @@ struct ConcorsoDetailsView: View {
 
     @State private var details: ConcorsoDetails? = nil
 
+    @StateObject private var savedForLaterStore = SavedForLaterStore.shared
+
     func getDetails() async {
         let result = try? await ConcorsoDetails.get(id: id)
 
@@ -57,6 +59,24 @@ struct ConcorsoDetailsView: View {
                     }
                 }
                 .toolbar {
+                    ToolbarItem {
+                        Button {
+                            Task {
+                                try await savedForLaterStore.contains(id: details.id)
+                                ? savedForLaterStore.remove(id: details.id)
+                                : savedForLaterStore.add(details)
+                            }
+                        } label: {
+                            Label(
+                                savedForLaterStore.contains(id: details.id)
+                                ? "Rimuovi"
+                                : "Salva per dopo",
+                                systemImage:  savedForLaterStore.contains(id: details.id)
+                                ? "bookmark.fill"
+                                : "bookmark"
+                            )
+                        }
+                    }
                     ToolbarItem {
                         Button {
                             let url = "https://www.inpa.gov.it/bandi-e-avvisi/dettaglio-bando-avviso/?concorso_id=\(id)"
