@@ -38,12 +38,17 @@ struct HomeView: View {
 
     var body: some View {
         NavigationStack {
-            // TODO: Show message if empty results
             List {
                 if let concorsi {
-                    Text("Trovati **\(concorsi.totalElements)** risultati")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+                    if concorsi.content.isEmpty {
+                        Text("Non sono stati trovati risultati")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    } else {
+                        Text("Trovati **\(concorsi.totalElements)** risultati")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
 
                     ForEach(concorsi.content) { concorso in
                         NavigationLink {
