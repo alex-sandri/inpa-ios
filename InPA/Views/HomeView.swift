@@ -81,7 +81,7 @@ struct HomeView: View {
             .listStyle(.grouped)
             .scrollContentBackground(.hidden)
             .refreshable {
-                await getConcorsi()
+                await getConcorsi(reset: true)
             }
             .searchable(
                 text: $query,
