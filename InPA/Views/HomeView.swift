@@ -9,6 +9,8 @@ import SwiftUI
 
 // TODO: Avoid refreshing the view every time the returns to this page via navigation
 struct HomeView: View {
+    @State private var progressViewId = 0
+
     @State private var query: String = ""
     @State private var filters: Filters = Filters()
 
@@ -70,10 +72,13 @@ struct HomeView: View {
                         }
                     }
                 } else {
-                    // TODO: Fix this only showing up the first time
                     HStack {
                         Spacer()
                         ProgressView()
+                            .id(progressViewId)
+                            .onAppear {
+                                progressViewId += 1
+                            }
                         Spacer()
                     }
                 }
