@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SPIDSignInView: View {
+    @State private var isWebViewLoading = true
     @State private var showSignInWebView = false
 
     @State private var selectedIdentityProvider: SPIDIdentityProvider? = nil
@@ -46,10 +47,20 @@ struct SPIDSignInView: View {
             .navigationTitle("Accedi con SPID")
             .sheet(isPresented: $showSignInWebView) {
                 if let selectedIdentityProvider {
-                    try? SPIDSignInWebView(idp: selectedIdentityProvider) { accessToken in
+                    try? SPIDSignInWebView(idp: selectedIdentityProvider) {
+                        isWebViewLoading = false
+                    } didSignIn: { accessToken in
                         showSignInWebView = false
 
-                        print(accessToken)
+                        print(accessToken) // TODO: Store this token
+                    }
+                    .overlay {
+                        if isWebViewLoading {
+                            ProgressView()
+                        }
+                    }
+                    .onAppear {
+                        isWebViewLoading = true
                     }
                 }
             }

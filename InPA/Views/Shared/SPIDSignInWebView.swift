@@ -15,9 +15,15 @@ enum SPIDSignInWebViewError: Error {
 struct SPIDSignInWebView: UIViewRepresentable {
     let url: URL
 
+    let didFinishLoading: () -> Void?
+
     let didSignIn: (String) -> Void
 
-    init(idp: SPIDIdentityProvider, didSignIn: @escaping (String) -> Void) throws {
+    init(
+        idp: SPIDIdentityProvider,
+        didFinishLoading: @escaping () -> Void = { },
+        didSignIn: @escaping (String) -> Void
+    ) throws {
         let urlString = "https://portale.inpa.gov.it/saml/login/alias/default?idp=\(idp.rawValue)"
 
         guard let url = URL(string: urlString) else {
@@ -25,6 +31,9 @@ struct SPIDSignInWebView: UIViewRepresentable {
         }
 
         self.url = url
+
+        self.didFinishLoading = didFinishLoading
+
         self.didSignIn = didSignIn
     }
 
@@ -67,9 +76,9 @@ struct SPIDSignInWebView: UIViewRepresentable {
 
             return .allow
         }
-        
-        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            
+
+        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation) {
+            parent.didFinishLoading()
         }
     }
 }
