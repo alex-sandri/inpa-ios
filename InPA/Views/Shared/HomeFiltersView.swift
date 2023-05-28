@@ -44,28 +44,46 @@ struct HomeFiltersView: View {
         }
     }
 
+    func setCategories(_ categories: [Category], selected: String?) {
+        self.categories = categories
+        selectedCategory = selected ?? "0"
+    }
+
+    func setGeographicAreas(_ geographicAreas: [GeographicArea], selected: String?) {
+        self.geographicAreas = geographicAreas
+        selectedGeographicArea = selected ?? "0"
+    }
+
+    func setSectors(_ sectors: [Sector], selected: String?) {
+        self.sectors = sectors
+        selectedSector = selected ?? "0"
+    }
+
     func initialize() async {
-        // TODO: Load all of these together
+        await withTaskGroup(of: Void.self) { group in
+            group.addTask {
+                let categories = try? await Category.list()
 
-        let categories = try? await Category.list()
+                if let categories {
+                    await setCategories(categories, selected: self.filters.category?.id)
+                }
+            }
 
-        if let categories {
-            self.categories = categories
-            selectedCategory = self.filters.category?.id ?? "0"
-        }
+            group.addTask {
+                let geographicAreas = try? await GeographicArea.list()
 
-        let geographicAreas = try? await GeographicArea.list()
+                if let geographicAreas {
+                    await setGeographicAreas(geographicAreas, selected: self.filters.geographicArea?.id)
+                }
+            }
 
-        if let geographicAreas {
-            self.geographicAreas = geographicAreas
-            selectedGeographicArea = self.filters.geographicArea?.id ?? "0"
-        }
+            group.addTask {
+                let sectors = try? await Sector.list()
 
-        let sectors = try? await Sector.list()
-
-        if let sectors {
-            self.sectors = sectors
-            selectedSector = self.filters.sector?.id ?? "0"
+                if let sectors {
+                    await setSectors(sectors, selected: self.filters.sector?.id)
+                }
+            }
         }
     }
 
