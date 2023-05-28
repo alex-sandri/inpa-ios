@@ -18,6 +18,7 @@
 		907DED862A1A15A800389717 /* Concorso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907DED852A1A15A800389717 /* Concorso.swift */; };
 		907DED8A2A1A1C4200389717 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907DED892A1A1C4200389717 /* JsonParser.swift */; };
 		907DED8C2A1A2CFA00389717 /* Concorsi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907DED8B2A1A2CFA00389717 /* Concorsi.swift */; };
+		908DA6BB2A1F453F00BCB8C6 /* SPIDSignInWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908DA6BA2A1F453F00BCB8C6 /* SPIDSignInWebView.swift */; };
 		9093AE982A18E492005D26F1 /* InPAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9093AE972A18E492005D26F1 /* InPAApp.swift */; };
 		9093AE9A2A18E492005D26F1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9093AE992A18E492005D26F1 /* HomeView.swift */; };
 		9093AE9C2A18E493005D26F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9093AE9B2A18E493005D26F1 /* Assets.xcassets */; };
@@ -25,6 +26,8 @@
 		90A633352A1B9ED70010D452 /* HomeFiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A633342A1B9ED70010D452 /* HomeFiltersView.swift */; };
 		90A633372A1B9F4E0010D452 /* ConcorsoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A633362A1B9F4E0010D452 /* ConcorsoRow.swift */; };
 		90A6333A2A1BDE8B0010D452 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A633392A1BDE8B0010D452 /* Type.swift */; };
+		90B983362A1F88BE00B986BF /* SPIDIdentityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B983352A1F88BE00B986BF /* SPIDIdentityProvider.swift */; };
+		90B983382A1F90AA00B986BF /* SPIDSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B983372A1F90AA00B986BF /* SPIDSignInView.swift */; };
 		90F29D9B2A1A7D95003A3161 /* GeographicArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F29D9A2A1A7D95003A3161 /* GeographicArea.swift */; };
 		90F29D9D2A1A8B75003A3161 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F29D9C2A1A8B75003A3161 /* Category.swift */; };
 		90F29D9F2A1A8BF2003A3161 /* CategoryFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F29D9E2A1A8BF2003A3161 /* CategoryFeatures.swift */; };
@@ -47,6 +50,7 @@
 		907DED852A1A15A800389717 /* Concorso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concorso.swift; sourceTree = "<group>"; };
 		907DED892A1A1C4200389717 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		907DED8B2A1A2CFA00389717 /* Concorsi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concorsi.swift; sourceTree = "<group>"; };
+		908DA6BA2A1F453F00BCB8C6 /* SPIDSignInWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPIDSignInWebView.swift; sourceTree = "<group>"; };
 		9093AE942A18E492005D26F1 /* InPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9093AE972A18E492005D26F1 /* InPAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InPAApp.swift; sourceTree = "<group>"; };
 		9093AE992A18E492005D26F1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -55,6 +59,8 @@
 		90A633342A1B9ED70010D452 /* HomeFiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFiltersView.swift; sourceTree = "<group>"; };
 		90A633362A1B9F4E0010D452 /* ConcorsoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcorsoRow.swift; sourceTree = "<group>"; };
 		90A633392A1BDE8B0010D452 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		90B983352A1F88BE00B986BF /* SPIDIdentityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPIDIdentityProvider.swift; sourceTree = "<group>"; };
+		90B983372A1F90AA00B986BF /* SPIDSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPIDSignInView.swift; sourceTree = "<group>"; };
 		90F29D9A2A1A7D95003A3161 /* GeographicArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeographicArea.swift; sourceTree = "<group>"; };
 		90F29D9C2A1A8B75003A3161 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		90F29D9E2A1A8BF2003A3161 /* CategoryFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFeatures.swift; sourceTree = "<group>"; };
@@ -168,6 +174,8 @@
 			children = (
 				90A633342A1B9ED70010D452 /* HomeFiltersView.swift */,
 				90A633362A1B9F4E0010D452 /* ConcorsoRow.swift */,
+				908DA6BA2A1F453F00BCB8C6 /* SPIDSignInWebView.swift */,
+				90B983372A1F90AA00B986BF /* SPIDSignInView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -177,6 +185,7 @@
 			children = (
 				90F29DA02A1A8D2E003A3161 /* Status.swift */,
 				90A633392A1BDE8B0010D452 /* Type.swift */,
+				90B983352A1F88BE00B986BF /* SPIDIdentityProvider.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -253,6 +262,7 @@
 			files = (
 				907DED862A1A15A800389717 /* Concorso.swift in Sources */,
 				90F29DA32A1A8F76003A3161 /* Sector.swift in Sources */,
+				90B983362A1F88BE00B986BF /* SPIDIdentityProvider.swift in Sources */,
 				903DBFD22A1CBB6B00923501 /* ConcorsoDetailsView.swift in Sources */,
 				90A633372A1B9F4E0010D452 /* ConcorsoRow.swift in Sources */,
 				903DBFDC2A1CEA4600923501 /* Pageable.swift in Sources */,
@@ -261,6 +271,8 @@
 				907DED8A2A1A1C4200389717 /* JsonParser.swift in Sources */,
 				907DED8C2A1A2CFA00389717 /* Concorsi.swift in Sources */,
 				90F29DA92A1A9737003A3161 /* Filters.swift in Sources */,
+				908DA6BB2A1F453F00BCB8C6 /* SPIDSignInWebView.swift in Sources */,
+				90B983382A1F90AA00B986BF /* SPIDSignInView.swift in Sources */,
 				90A6333A2A1BDE8B0010D452 /* Type.swift in Sources */,
 				901F57C12A1D1BE200FCA444 /* SavedForLaterView.swift in Sources */,
 				903DBFD02A1CA19D00923501 /* Logger.swift in Sources */,
