@@ -32,6 +32,11 @@ description:
 
       - Accedere al tuo account tramite [SPID](https://www.spid.gov.it) (in fase
       di sviluppo)
+    screenshots:
+      - |-
+        https://raw.githubusercontent.com/alex-sandri/inpa-ios/master/screenshots/home.png
+      - |-
+        https://raw.githubusercontent.com/alex-sandri/inpa-ios/master/screenshots/filters.png
     shortDescription: App non ufficiale del portale inPA.
 developmentStatus: development
 it:
