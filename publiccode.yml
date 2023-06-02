@@ -65,7 +65,7 @@ maintenance:
     - email: me@alexsandri.com
       name: Alex Sandri
   type: internal
-name: InPA (iOS)
+name: inPA (iOS)
 platforms:
   - ios
 releaseDate: '2023-06-02'
