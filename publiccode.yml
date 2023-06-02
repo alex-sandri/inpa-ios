@@ -1,0 +1,68 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+categories:
+  - digital-citizenship
+description:
+  it:
+    features:
+      - Consultazione bandi/avvisi
+      - Salva per dopo
+    genericName: App
+    longDescription: |
+      App non ufficiale del portale [inPA](https://www.inpa.gov.it).
+
+
+      Con quest'app puoi:
+
+
+      - Visualizzare tutti i bandi/avvisi pubblicati e consultarne i dettagli
+
+      - Cercare un bando/avviso in particolare (tramite ricerca testuale o con i
+      filtri a disposizione)
+
+      - Salvare un bando/avviso per dopo così da poterci accedere più
+      velocemente
+
+      - Scaricare eventuali allegati presenti
+
+      - Inviare la tua candidatura tramite il portale web
+
+      - Accedere al tuo account tramite [SPID](https://www.spid.gov.it) (in fase
+      di sviluppo)
+    shortDescription: App non ufficiale del portale inPA.
+developmentStatus: development
+it:
+  conforme:
+    gdpr: true
+    lineeGuidaDesign: false
+    misureMinimeSicurezza: false
+    modelloInteroperabilita: false
+  countryExtensionVersion: '0.2'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: false
+    spid: true
+legal:
+  license: MIT
+  mainCopyrightOwner: Alex Sandri
+  repoOwner: Alex Sandri
+localisation:
+  availableLanguages:
+    - it
+  localisationReady: true
+logo: 'https://raw.githubusercontent.com/alex-sandri/inpa-ios/master/AppIcon.svg'
+maintenance:
+  contacts:
+    - email: me@alexsandri.com
+      name: Alex Sandri
+  type: internal
+name: InPA (iOS)
+platforms:
+  - ios
+releaseDate: '2023-06-02'
+softwareType: standalone/mobile
+url: 'https://github.com/alex-sandri/inpa-ios'
