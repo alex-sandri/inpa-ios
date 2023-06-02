@@ -5,3 +5,7 @@
 ![GitHub](https://img.shields.io/github/license/alex-sandri/inpa-ios)
 
 Unofficial [InPA](https://www.inpa.gov.it) iOS app.
+
+---
+
+&copy; 2023 - Alex Sandri
