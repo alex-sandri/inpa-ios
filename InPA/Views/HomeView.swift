@@ -108,7 +108,7 @@ struct HomeView: View {
                     await getConcorsi(reset: true)
                 }
             }
-            .navigationTitle("InPA")
+            .navigationTitle("inPA")
             .toolbar {
                 Button {
                     showFilters.toggle()
