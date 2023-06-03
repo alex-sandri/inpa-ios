@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// TODO: Avoid refreshing the view every time the returns to this page via navigation
 struct HomeView: View {
     @State private var progressViewId = 0
 
@@ -145,7 +144,10 @@ struct HomeView: View {
                 }
             }
             .task {
-                await getConcorsi(reset: true)
+                // Load only if not loaded before
+                if concorsi == nil {
+                    await getConcorsi(reset: true)
+                }
             }
         }
     }
