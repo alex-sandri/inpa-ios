@@ -15,10 +15,14 @@
 		903DBFD82A1CE2CF00923501 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903DBFD72A1CE2CF00923501 /* Attachment.swift */; };
 		903DBFDA2A1CE45000923501 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903DBFD92A1CE45000923501 /* Company.swift */; };
 		903DBFDC2A1CEA4600923501 /* Pageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903DBFDB2A1CEA4600923501 /* Pageable.swift */; };
+		903FD9722A2B77F20045AB7B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903FD9712A2B77F20045AB7B /* User.swift */; };
 		907DED862A1A15A800389717 /* Concorso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907DED852A1A15A800389717 /* Concorso.swift */; };
 		907DED8A2A1A1C4200389717 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907DED892A1A1C4200389717 /* JsonParser.swift */; };
 		907DED8C2A1A2CFA00389717 /* Concorsi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907DED8B2A1A2CFA00389717 /* Concorsi.swift */; };
 		908DA6BB2A1F453F00BCB8C6 /* SPIDSignInWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908DA6BA2A1F453F00BCB8C6 /* SPIDSignInWebView.swift */; };
+		908EF7B42A2B5F3B006D8D46 /* AuthStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908EF7B32A2B5F3B006D8D46 /* AuthStateView.swift */; };
+		908EF7B62A2B617F006D8D46 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908EF7B52A2B617F006D8D46 /* RootView.swift */; };
+		908EF7B82A2B6250006D8D46 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908EF7B72A2B6250006D8D46 /* AccountView.swift */; };
 		9093AE982A18E492005D26F1 /* InPAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9093AE972A18E492005D26F1 /* InPAApp.swift */; };
 		9093AE9A2A18E492005D26F1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9093AE992A18E492005D26F1 /* HomeView.swift */; };
 		9093AE9C2A18E493005D26F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9093AE9B2A18E493005D26F1 /* Assets.xcassets */; };
@@ -26,6 +30,8 @@
 		90A633352A1B9ED70010D452 /* HomeFiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A633342A1B9ED70010D452 /* HomeFiltersView.swift */; };
 		90A633372A1B9F4E0010D452 /* ConcorsoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A633362A1B9F4E0010D452 /* ConcorsoRow.swift */; };
 		90A6333A2A1BDE8B0010D452 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A633392A1BDE8B0010D452 /* Type.swift */; };
+		90AF80832A27503F00958D07 /* AuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AF80822A27503F00958D07 /* AuthStore.swift */; };
+		90AF80882A27682900958D07 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 90AF80872A27682900958D07 /* KeychainAccess */; };
 		90B983362A1F88BE00B986BF /* SPIDIdentityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B983352A1F88BE00B986BF /* SPIDIdentityProvider.swift */; };
 		90B983382A1F90AA00B986BF /* SPIDSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B983372A1F90AA00B986BF /* SPIDSignInView.swift */; };
 		90F29D9B2A1A7D95003A3161 /* GeographicArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F29D9A2A1A7D95003A3161 /* GeographicArea.swift */; };
@@ -47,10 +53,14 @@
 		903DBFD72A1CE2CF00923501 /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 		903DBFD92A1CE45000923501 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		903DBFDB2A1CEA4600923501 /* Pageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pageable.swift; sourceTree = "<group>"; };
+		903FD9712A2B77F20045AB7B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		907DED852A1A15A800389717 /* Concorso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concorso.swift; sourceTree = "<group>"; };
 		907DED892A1A1C4200389717 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		907DED8B2A1A2CFA00389717 /* Concorsi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concorsi.swift; sourceTree = "<group>"; };
 		908DA6BA2A1F453F00BCB8C6 /* SPIDSignInWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPIDSignInWebView.swift; sourceTree = "<group>"; };
+		908EF7B32A2B5F3B006D8D46 /* AuthStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStateView.swift; sourceTree = "<group>"; };
+		908EF7B52A2B617F006D8D46 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		908EF7B72A2B6250006D8D46 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		9093AE942A18E492005D26F1 /* InPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9093AE972A18E492005D26F1 /* InPAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InPAApp.swift; sourceTree = "<group>"; };
 		9093AE992A18E492005D26F1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -59,6 +69,7 @@
 		90A633342A1B9ED70010D452 /* HomeFiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFiltersView.swift; sourceTree = "<group>"; };
 		90A633362A1B9F4E0010D452 /* ConcorsoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcorsoRow.swift; sourceTree = "<group>"; };
 		90A633392A1BDE8B0010D452 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		90AF80822A27503F00958D07 /* AuthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStore.swift; sourceTree = "<group>"; };
 		90B983352A1F88BE00B986BF /* SPIDIdentityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPIDIdentityProvider.swift; sourceTree = "<group>"; };
 		90B983372A1F90AA00B986BF /* SPIDSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPIDSignInView.swift; sourceTree = "<group>"; };
 		90F29D9A2A1A7D95003A3161 /* GeographicArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeographicArea.swift; sourceTree = "<group>"; };
@@ -76,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90AF80882A27682900958D07 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				901F57C32A1D1D0800FCA444 /* SavedForLaterStore.swift */,
+				90AF80822A27503F00958D07 /* AuthStore.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -154,6 +167,7 @@
 				903DBFD72A1CE2CF00923501 /* Attachment.swift */,
 				903DBFD92A1CE45000923501 /* Company.swift */,
 				903DBFDB2A1CEA4600923501 /* Pageable.swift */,
+				903FD9712A2B77F20045AB7B /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +179,8 @@
 				9093AE992A18E492005D26F1 /* HomeView.swift */,
 				903DBFD12A1CBB6B00923501 /* ConcorsoDetailsView.swift */,
 				901F57C02A1D1BE200FCA444 /* SavedForLaterView.swift */,
+				908EF7B52A2B617F006D8D46 /* RootView.swift */,
+				908EF7B72A2B6250006D8D46 /* AccountView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +192,7 @@
 				90A633362A1B9F4E0010D452 /* ConcorsoRow.swift */,
 				908DA6BA2A1F453F00BCB8C6 /* SPIDSignInWebView.swift */,
 				90B983372A1F90AA00B986BF /* SPIDSignInView.swift */,
+				908EF7B32A2B5F3B006D8D46 /* AuthStateView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -206,6 +223,9 @@
 			dependencies = (
 			);
 			name = InPA;
+			packageProductDependencies = (
+				90AF80872A27682900958D07 /* KeychainAccess */,
+			);
 			productName = InPA;
 			productReference = 9093AE942A18E492005D26F1 /* InPA.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +254,9 @@
 				it,
 			);
 			mainGroup = 9093AE8B2A18E492005D26F1;
+			packageReferences = (
+				90AF80862A27682900958D07 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 9093AE952A18E492005D26F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -264,15 +287,18 @@
 				90F29DA32A1A8F76003A3161 /* Sector.swift in Sources */,
 				90B983362A1F88BE00B986BF /* SPIDIdentityProvider.swift in Sources */,
 				903DBFD22A1CBB6B00923501 /* ConcorsoDetailsView.swift in Sources */,
+				903FD9722A2B77F20045AB7B /* User.swift in Sources */,
 				90A633372A1B9F4E0010D452 /* ConcorsoRow.swift in Sources */,
 				903DBFDC2A1CEA4600923501 /* Pageable.swift in Sources */,
 				903DBFD82A1CE2CF00923501 /* Attachment.swift in Sources */,
 				9093AE9A2A18E492005D26F1 /* HomeView.swift in Sources */,
 				907DED8A2A1A1C4200389717 /* JsonParser.swift in Sources */,
+				90AF80832A27503F00958D07 /* AuthStore.swift in Sources */,
 				907DED8C2A1A2CFA00389717 /* Concorsi.swift in Sources */,
 				90F29DA92A1A9737003A3161 /* Filters.swift in Sources */,
 				908DA6BB2A1F453F00BCB8C6 /* SPIDSignInWebView.swift in Sources */,
 				90B983382A1F90AA00B986BF /* SPIDSignInView.swift in Sources */,
+				908EF7B62A2B617F006D8D46 /* RootView.swift in Sources */,
 				90A6333A2A1BDE8B0010D452 /* Type.swift in Sources */,
 				901F57C12A1D1BE200FCA444 /* SavedForLaterView.swift in Sources */,
 				903DBFD02A1CA19D00923501 /* Logger.swift in Sources */,
@@ -282,10 +308,12 @@
 				90F29D9B2A1A7D95003A3161 /* GeographicArea.swift in Sources */,
 				90F29D9F2A1A8BF2003A3161 /* CategoryFeatures.swift in Sources */,
 				90F29D9D2A1A8B75003A3161 /* Category.swift in Sources */,
+				908EF7B42A2B5F3B006D8D46 /* AuthStateView.swift in Sources */,
 				901F57C42A1D1D0800FCA444 /* SavedForLaterStore.swift in Sources */,
 				90F29DA72A1A952D003A3161 /* NumbersOnly.swift in Sources */,
 				90A633352A1B9ED70010D452 /* HomeFiltersView.swift in Sources */,
 				90F29DA52A1A8FBF003A3161 /* SectorFeatures.swift in Sources */,
+				908EF7B82A2B6250006D8D46 /* AccountView.swift in Sources */,
 				903DBFD42A1CBFFC00923501 /* ConcorsoDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +515,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		90AF80862A27682900958D07 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				kind = exactVersion;
+				version = 4.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		90AF80872A27682900958D07 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90AF80862A27682900958D07 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9093AE8C2A18E492005D26F1 /* Project object */;
 }

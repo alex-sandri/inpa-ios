@@ -17,12 +17,12 @@ struct SPIDSignInWebView: UIViewRepresentable {
 
     let didFinishLoading: () -> Void?
 
-    let didSignIn: (String) -> Void
+    let didSignIn: (String) async -> Void
 
     init(
         idp: SPIDIdentityProvider,
         didFinishLoading: @escaping () -> Void = { },
-        didSignIn: @escaping (String) -> Void
+        didSignIn: @escaping (String) async -> Void
     ) throws {
         let urlString = "https://portale.inpa.gov.it/saml/login/alias/default?idp=\(idp.rawValue)"
 
@@ -67,8 +67,8 @@ struct SPIDSignInWebView: UIViewRepresentable {
             let cookies = await webView.configuration.websiteDataStore.httpCookieStore.allCookies()
 
             for cookie in cookies {
-                if (cookie.name == "access_token") {
-                    parent.didSignIn(cookie.value)
+                if cookie.name == "access_token" {
+                    await parent.didSignIn(cookie.value)
 
                     return .cancel
                 }

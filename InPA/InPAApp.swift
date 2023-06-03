@@ -11,9 +11,10 @@ import SwiftUI
 struct InPAApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            RootView()
                 .task {
                     do {
+                        await AuthStore.shared.load()
                         try await SavedForLaterStore.shared.load()
                     } catch {
                         fatalError(error.localizedDescription)

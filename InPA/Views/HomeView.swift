@@ -20,6 +20,8 @@ struct HomeView: View {
 
     @State private var showFilters = false
 
+    @StateObject private var authStore = AuthStore.shared
+
     func getConcorsi(page: Int = 0, reset: Bool = false) async {
         if reset {
             concorsi = nil
@@ -131,13 +133,15 @@ struct HomeView: View {
                     )
                 }
 
-                NavigationLink {
-                    SPIDSignInView()
-                } label: {
-                    Label(
-                        "Accedi",
-                        systemImage: "person.crop.circle"
-                    )
+                if !authStore.isSignedIn {
+                    NavigationLink {
+                        SPIDSignInView()
+                    } label: {
+                        Label(
+                            "Accedi",
+                            systemImage: "person.crop.circle"
+                        )
+                    }
                 }
             }
             .task {
@@ -152,6 +156,7 @@ struct HomeView_Previews: PreviewProvider {
         HomeView()
             .task {
                 do {
+                    await AuthStore.shared.load()
                     try await SavedForLaterStore.shared.load()
                 } catch {
                     fatalError(error.localizedDescription)

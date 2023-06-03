@@ -13,6 +13,7 @@ struct SPIDSignInView: View {
 
     @State private var selectedIdentityProvider: SPIDIdentityProvider? = nil
 
+    @Environment(\.dismiss) private var dismiss
     @Environment(\.colorScheme) private var colorScheme: ColorScheme
 
     var body: some View {
@@ -52,7 +53,9 @@ struct SPIDSignInView: View {
                     } didSignIn: { accessToken in
                         showSignInWebView = false
 
-                        print(accessToken) // TODO: Store this token
+                        await AuthStore.shared.setAccessToken(accessToken)
+
+                        dismiss()
                     }
                     .overlay {
                         if isWebViewLoading {
