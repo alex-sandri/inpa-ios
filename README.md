@@ -12,7 +12,8 @@ Con quest'app puoi:
 - Salvare un bando/avviso per dopo così da poterci accedere più velocemente
 - Scaricare eventuali allegati presenti
 - Inviare la tua candidatura tramite il portale web
-- Accedere al tuo account tramite [SPID](https://www.spid.gov.it) (in fase di sviluppo)
+- Accedere al tuo account tramite [SPID](https://www.spid.gov.it)
+- Visualizzare le tue candidature (in fase di sviluppo)
 
 ## Screenshot
 

@@ -30,8 +30,9 @@ description:
 
       - Inviare la tua candidatura tramite il portale web
 
-      - Accedere al tuo account tramite [SPID](https://www.spid.gov.it) (in fase
-      di sviluppo)
+      - Accedere al tuo account tramite [SPID](https://www.spid.gov.it)
+
+      - Visualizzare le tue candidature (in fase di sviluppo)
     screenshots:
       - |-
         https://raw.githubusercontent.com/alex-sandri/inpa-ios/master/screenshots/home.png
