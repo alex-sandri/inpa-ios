@@ -1,5 +1,5 @@
 //
-//  Type.swift
+//  SelectionType.swift
 //  InPA
 //
 //  Created by Alex Sandri on 22/05/23.
