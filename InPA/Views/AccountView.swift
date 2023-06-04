@@ -54,13 +54,6 @@ struct AccountView: View {
 struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
         AccountView()
-            .task {
-                do {
-                    await AuthStore.shared.load()
-                    try await SavedForLaterStore.shared.load()
-                } catch {
-                    fatalError(error.localizedDescription)
-                }
-            }
+            .task { await InPAApp.initialize() }
     }
 }

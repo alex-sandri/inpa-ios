@@ -9,17 +9,19 @@ import SwiftUI
 
 @main
 struct InPAApp: App {
+    static func initialize() async {
+        do {
+            await AuthStore.shared.load()
+            try await SavedForLaterStore.shared.load()
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+
     var body: some Scene {
         WindowGroup {
             RootView()
-                .task {
-                    do {
-                        await AuthStore.shared.load()
-                        try await SavedForLaterStore.shared.load()
-                    } catch {
-                        fatalError(error.localizedDescription)
-                    }
-                }
+                .task { await InPAApp.initialize() }
         }
     }
 }

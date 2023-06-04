@@ -47,12 +47,6 @@ struct SavedForLaterView: View {
 struct SavedForLaterView_Previews: PreviewProvider {
     static var previews: some View {
         SavedForLaterView()
-            .task {
-                do {
-                    try await SavedForLaterStore.shared.load()
-                } catch {
-                    fatalError(error.localizedDescription)
-                }
-            }
+            .task { await InPAApp.initialize() }
     }
 }

@@ -31,13 +31,6 @@ struct RootView: View {
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
-            .task {
-                do {
-                    await AuthStore.shared.load()
-                    try await SavedForLaterStore.shared.load()
-                } catch {
-                    fatalError(error.localizedDescription)
-                }
-            }
+            .task { await InPAApp.initialize() }
     }
 }

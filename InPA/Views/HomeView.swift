@@ -156,13 +156,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-            .task {
-                do {
-                    await AuthStore.shared.load()
-                    try await SavedForLaterStore.shared.load()
-                } catch {
-                    fatalError(error.localizedDescription)
-                }
-            }
+            .task { await InPAApp.initialize() }
     }
 }
