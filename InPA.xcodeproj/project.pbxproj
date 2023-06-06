@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		900E77EF2A2CBD680037B491 /* CandidatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E77EE2A2CBD680037B491 /* CandidatureView.swift */; };
+		900E77F12A2CBD9A0037B491 /* CandidaturaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E77F02A2CBD9A0037B491 /* CandidaturaType.swift */; };
 		901F57C12A1D1BE200FCA444 /* SavedForLaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901F57C02A1D1BE200FCA444 /* SavedForLaterView.swift */; };
 		901F57C42A1D1D0800FCA444 /* SavedForLaterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901F57C32A1D1D0800FCA444 /* SavedForLaterStore.swift */; };
 		903DBFD02A1CA19D00923501 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903DBFCF2A1CA19D00923501 /* Logger.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		900E77EE2A2CBD680037B491 /* CandidatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidatureView.swift; sourceTree = "<group>"; };
+		900E77F02A2CBD9A0037B491 /* CandidaturaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidaturaType.swift; sourceTree = "<group>"; };
 		901F57C02A1D1BE200FCA444 /* SavedForLaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedForLaterView.swift; sourceTree = "<group>"; };
 		901F57C32A1D1D0800FCA444 /* SavedForLaterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedForLaterStore.swift; sourceTree = "<group>"; };
 		903DBFCF2A1CA19D00923501 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 				901F57C02A1D1BE200FCA444 /* SavedForLaterView.swift */,
 				908EF7B52A2B617F006D8D46 /* RootView.swift */,
 				908EF7B72A2B6250006D8D46 /* AccountView.swift */,
+				900E77EE2A2CBD680037B491 /* CandidatureView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				90F29DA02A1A8D2E003A3161 /* Status.swift */,
 				90A633392A1BDE8B0010D452 /* SelectionType.swift */,
 				90B983352A1F88BE00B986BF /* SPIDIdentityProvider.swift */,
+				900E77F02A2CBD9A0037B491 /* CandidaturaType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -303,10 +309,12 @@
 				901F57C12A1D1BE200FCA444 /* SavedForLaterView.swift in Sources */,
 				903DBFD02A1CA19D00923501 /* Logger.swift in Sources */,
 				903DBFDA2A1CE45000923501 /* Company.swift in Sources */,
+				900E77F12A2CBD9A0037B491 /* CandidaturaType.swift in Sources */,
 				9093AE982A18E492005D26F1 /* InPAApp.swift in Sources */,
 				90F29DA12A1A8D2E003A3161 /* Status.swift in Sources */,
 				90F29D9B2A1A7D95003A3161 /* GeographicArea.swift in Sources */,
 				90F29D9F2A1A8BF2003A3161 /* CategoryFeatures.swift in Sources */,
+				900E77EF2A2CBD680037B491 /* CandidatureView.swift in Sources */,
 				90F29D9D2A1A8B75003A3161 /* Category.swift in Sources */,
 				908EF7B42A2B5F3B006D8D46 /* AuthStateView.swift in Sources */,
 				901F57C42A1D1D0800FCA444 /* SavedForLaterStore.swift in Sources */,

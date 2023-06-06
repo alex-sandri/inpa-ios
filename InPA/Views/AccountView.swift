@@ -21,15 +21,12 @@ struct AccountView: View {
                     }
 
                     Section("Candidature") {
-                        NavigationLink {
-                            // TODO
-                        } label: {
-                            Label("Inviate", systemImage: "paperplane")
-                        }
-                        NavigationLink {
-                            // TODO
-                        } label: {
-                            Label("In compilazione", systemImage: "pencil")
+                        ForEach(CandidaturaType.allCases) { type in
+                            NavigationLink {
+                                CandidatureView(type: type)
+                            } label: {
+                                Label(type.displayName, systemImage: type.systemImage)
+                            }
                         }
                     }
                 }
