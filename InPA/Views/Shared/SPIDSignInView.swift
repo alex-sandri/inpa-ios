@@ -36,7 +36,7 @@ struct SPIDSignInView: View {
                         .tint(colorScheme == .light ? Color(.systemGray6) : .white)
                     }
                 }
-                .onChange(of: selectedIdentityProvider) { _ in
+                .onChange(of: selectedIdentityProvider) {
                     /*
                      Toggle this here as doing so inside of the button action
                      would show the view before the state has been actually updated.

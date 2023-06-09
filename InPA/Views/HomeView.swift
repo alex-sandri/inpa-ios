@@ -93,7 +93,7 @@ struct HomeView: View {
                 text: $query,
                 placement: .navigationBarDrawer(displayMode: .always)
             )
-            .onChange(of: query) { query in
+            .onChange(of: query) {
                 searchTask?.cancel()
 
                 searchTask = Task {
@@ -102,7 +102,7 @@ struct HomeView: View {
                     await getConcorsi(reset: true)
                 }
             }
-            .onChange(of: filters) { filters in
+            .onChange(of: filters) {
                 searchTask?.cancel()
 
                 searchTask = Task {
