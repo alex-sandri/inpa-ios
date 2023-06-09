@@ -6,14 +6,16 @@
 //
 
 import Foundation
+import SwiftData
 
 @MainActor
-class SavedForLaterStore: ObservableObject {
+@Observable
+class SavedForLaterStore {
     static let shared = SavedForLaterStore()
 
     private init() {}
 
-    @Published var objects: [ConcorsoDetails] = []
+    var objects: [ConcorsoDetails] = []
 
     private static func fileURL() throws -> URL {
         try FileManager.default.url(

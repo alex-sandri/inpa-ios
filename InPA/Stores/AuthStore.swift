@@ -7,19 +7,21 @@
 
 import Foundation
 import KeychainAccess
+import SwiftData
 
 @MainActor
-class AuthStore: ObservableObject {
+@Observable
+class AuthStore {
     static let shared = AuthStore()
 
     private let keychain = Keychain()
 
     private init() {}
 
-    @Published var isLoading = true
+    var isLoading = true
 
-    @Published var user: User? = nil
-    @Published var accessToken: String? = nil
+    var user: User? = nil
+    var accessToken: String? = nil
 
     func load() async {
         self.accessToken = keychain["accessToken"]
