@@ -27,8 +27,8 @@ struct HomeFiltersView: View {
     @State private var toDate: Date = Date.now
     @State private var didSetToDate = false
 
-    @ObservedObject var minSalary = NumbersOnly()
-    @ObservedObject var maxSalary = NumbersOnly()
+    @State private var minSalary = ""
+    @State private var maxSalary = ""
 
     @Environment(\.dismiss) private var dismiss
 
@@ -36,11 +36,11 @@ struct HomeFiltersView: View {
         _filters = filters
 
         if let minSalary = self.filters.minSalary {
-            self.minSalary.value = "\(minSalary)"
+            self.minSalary = "\(minSalary)"
         }
 
         if let maxSalary = self.filters.maxSalary{
-            self.maxSalary.value = "\(maxSalary)"
+            self.maxSalary = "\(maxSalary)"
         }
     }
 
@@ -65,7 +65,7 @@ struct HomeFiltersView: View {
                 let categories = try? await Category.list()
 
                 if let categories {
-                    await setCategories(categories, selected: self.filters.category?.id)
+                    setCategories(categories, selected: self.filters.category?.id)
                 }
             }
 
@@ -73,7 +73,7 @@ struct HomeFiltersView: View {
                 let geographicAreas = try? await GeographicArea.list()
 
                 if let geographicAreas {
-                    await setGeographicAreas(geographicAreas, selected: self.filters.geographicArea?.id)
+                    setGeographicAreas(geographicAreas, selected: self.filters.geographicArea?.id)
                 }
             }
 
@@ -81,7 +81,7 @@ struct HomeFiltersView: View {
                 let sectors = try? await Sector.list()
 
                 if let sectors {
-                    await setSectors(sectors, selected: self.filters.sector?.id)
+                    setSectors(sectors, selected: self.filters.sector?.id)
                 }
             }
         }
@@ -101,15 +101,15 @@ struct HomeFiltersView: View {
             filters.toDate = toDate
         }
 
-        if let minSalary = Int(minSalary.value) {
+        if let minSalary = Int(minSalary) {
             filters.minSalary = minSalary
-        } else if minSalary.value.isEmpty {
+        } else if minSalary.isEmpty {
             filters.minSalary = nil
         }
 
-        if let maxSalary = Int(maxSalary.value) {
+        if let maxSalary = Int(maxSalary) {
             filters.maxSalary = maxSalary
-        } else if maxSalary.value.isEmpty {
+        } else if maxSalary.isEmpty {
             filters.maxSalary = nil
         }
 
@@ -207,12 +207,18 @@ struct HomeFiltersView: View {
             }
             Section(header: Text("Salario")) {
                 LabeledContent("Da") {
-                    TextField("€", text: $minSalary.value)
+                    TextField("€", text: $minSalary)
                         .keyboardType(.numberPad)
+                        .onChange(of: minSalary) { _, newValue in
+                            minSalary = newValue.filter { $0.isNumber }
+                        }
                 }
                 LabeledContent("A") {
-                    TextField("€", text: $maxSalary.value)
+                    TextField("€", text: $maxSalary)
                         .keyboardType(.numberPad)
+                        .onChange(of: maxSalary) { _, newValue in
+                            maxSalary = newValue.filter { $0.isNumber }
+                        }
                 }
             }
             Button {

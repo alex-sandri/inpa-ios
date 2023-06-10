@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AccountView: View {
-    @StateObject private var authStore = AuthStore.shared
+    @State private var authStore = AuthStore.shared
 
     var body: some View {
         NavigationStack {

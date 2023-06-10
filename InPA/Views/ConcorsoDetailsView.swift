@@ -12,7 +12,7 @@ struct ConcorsoDetailsView: View {
 
     @State private var details: ConcorsoDetails? = nil
 
-    @StateObject private var savedForLaterStore = SavedForLaterStore.shared
+    @State private var savedForLaterStore = SavedForLaterStore.shared
 
     func getDetails() async {
         let result = try? await ConcorsoDetails.get(id: id)

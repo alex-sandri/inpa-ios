@@ -12,7 +12,7 @@ struct AuthStateView<SignedInContent, SignedOutContent, LoadingContent>: View wh
     let signedOut: () -> SignedOutContent
     let loading: () -> LoadingContent
 
-    @StateObject private var authStore = AuthStore.shared
+    @State private var authStore = AuthStore.shared
 
     var body: some View {
         // HStack is needed as otherwise the view would not react with state changes

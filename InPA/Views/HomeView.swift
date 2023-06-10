@@ -19,7 +19,7 @@ struct HomeView: View {
 
     @State private var showFilters = false
 
-    @StateObject private var authStore = AuthStore.shared
+    @State private var authStore = AuthStore.shared
 
     func getConcorsi(page: Int = 0, reset: Bool = false) async {
         if reset {
@@ -119,9 +119,6 @@ struct HomeView: View {
                         systemImage: "line.3.horizontal.decrease.circle"
                     )
                 }
-                .sheet(isPresented: $showFilters) {
-                    HomeFiltersView(filters: $filters)
-                }
 
                 NavigationLink {
                     SavedForLaterView()
@@ -142,6 +139,9 @@ struct HomeView: View {
                         )
                     }
                 }
+            }
+            .sheet(isPresented: $showFilters) {
+                HomeFiltersView(filters: $filters)
             }
             .task {
                 // Load only if not loaded before

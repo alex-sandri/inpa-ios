@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SavedForLaterView: View {
-    @StateObject private var savedForLaterStore = SavedForLaterStore.shared
+    @State private var savedForLaterStore = SavedForLaterStore.shared
 
     var body: some View {
         NavigationStack {
