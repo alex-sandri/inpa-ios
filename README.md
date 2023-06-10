@@ -1,8 +1,9 @@
 <img src="AppIcon.svg" width="128px" height="128px">
 
-# inPA (iOS)
+# inPA
 
-![GitHub](https://img.shields.io/github/license/alex-sandri/inpa-ios)
+![Platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS-lightgrey)
+![License](https://img.shields.io/github/license/alex-sandri/inpa-ios)
 
 App non ufficiale del portale [inPA](https://www.inpa.gov.it).
 
@@ -16,6 +17,8 @@ Con quest'app puoi:
 - Visualizzare le tue candidature (in fase di sviluppo)
 
 ## Screenshot
+
+### iOS
 
 | Home | Filtri |
 | :-: | :-: |
