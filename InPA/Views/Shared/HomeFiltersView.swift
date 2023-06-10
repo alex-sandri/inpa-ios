@@ -34,14 +34,6 @@ struct HomeFiltersView: View {
 
     init(filters: Binding<Filters>) {
         _filters = filters
-
-        if let minSalary = self.filters.minSalary {
-            self.minSalary = "\(minSalary)"
-        }
-
-        if let maxSalary = self.filters.maxSalary{
-            self.maxSalary = "\(maxSalary)"
-        }
     }
 
     func setCategories(_ categories: [Category], selected: String?) {
@@ -60,6 +52,14 @@ struct HomeFiltersView: View {
     }
 
     func initialize() async {
+        if let minSalary = self.filters.minSalary {
+            self.minSalary = "\(minSalary)"
+        }
+
+        if let maxSalary = self.filters.maxSalary{
+            self.maxSalary = "\(maxSalary)"
+        }
+
         await withTaskGroup(of: Void.self) { group in
             group.addTask {
                 let categories = try? await Category.list()
