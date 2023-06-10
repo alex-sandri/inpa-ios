@@ -66,9 +66,10 @@ maintenance:
     - email: me@alexsandri.com
       name: Alex Sandri
   type: internal
-name: inPA (iOS)
+name: inPA
 platforms:
   - ios
+  - mac
 releaseDate: '2023-06-02'
 softwareType: standalone/mobile
 url: 'https://github.com/alex-sandri/inpa-ios'
