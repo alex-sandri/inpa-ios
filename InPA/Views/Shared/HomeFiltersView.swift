@@ -251,3 +251,10 @@ struct HomeFiltersView: View {
         }
     }
 }
+
+#Preview {
+    let filters = Filters()
+
+    return HomeFiltersView(filters: .constant(filters))
+        .task { await InPAApp.initialize() }
+}
