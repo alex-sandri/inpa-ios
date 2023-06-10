@@ -23,27 +23,38 @@ struct ConcorsoDetailsView: View {
     var body: some View {
         NavigationStack {
             if let details {
-                let sendApplicationUrl = details.linkReindirizzamento ?? "https://portale.inpa.gov.it/ui/public-area/login?returnUrl=%2Fpublic-area%2Fconcoursedetail%2F\(id)"
-
                 List {
                     Section("Descrizione") {
                         Text(details.descrizioneBreve)
                     }
 
-                    LabeledContent("Area geografica", value: details.expandedLocationFormatted)
-                    LabeledContent("Valutazione", value: details.tipoProcedura.displayName())
-                    LabeledContent("Stato", value: details.calculatedStatus.displayName())
-                    LabeledContent("Data apertura candidature", value: details.fromDateFormatted)
-                    LabeledContent("Data chiusura invio candidature", value: details.toDateFormatted)
+                    Section {
+                        LabeledContent("Area geografica", value: details.expandedLocationFormatted)
+                        LabeledContent("Valutazione", value: details.tipoProcedura.displayName())
+                        LabeledContent("Stato", value: details.calculatedStatus.displayName())
+                        LabeledContent("Data apertura candidature", value: details.fromDateFormatted)
+                        LabeledContent("Data chiusura invio candidature", value: details.toDateFormatted)
 
-                    if let numPosti = details.numPosti {
-                        LabeledContent("Numero di posti", value: "\(numPosti)")
+                        if let numPosti = details.numPosti {
+                            LabeledContent("Numero di posti", value: "\(numPosti)")
+                        }
+
+                        LabeledContent("Ente di riferimento", value: details.company.name)
+
+                        if let urlString = details.linkSitoPA, let url = URL(string: urlString) {
+                            Link("Link al sito della PA", destination: url)
+                        }
                     }
 
-                    LabeledContent("Ente di riferimento", value: details.company.name)
-
-                    if let urlString = details.linkSitoPA, let url = URL(string: urlString) {
-                        Link("Link al sito della PA", destination: url)
+                    if details.calculatedStatus == Status.open, let url = details.applicationURL {
+                        Link(destination: url) {
+                            Text("Invia la tua candidatura")
+                                .frame(maxWidth: .infinity)
+                        }
+                        .controlSize(.large)
+                        .buttonStyle(.borderedProminent)
+                        .listRowBackground(Color.clear)
+                        .listRowInsets(EdgeInsets())
                     }
 
                     Section("Bando/Avviso e Allegati") {
@@ -77,31 +88,15 @@ struct ConcorsoDetailsView: View {
                             )
                         }
                     }
-                    ToolbarItem {
-                        Button {
-                            let url = "https://www.inpa.gov.it/bandi-e-avvisi/dettaglio-bando-avviso/?concorso_id=\(id)"
 
-                            if let url = URL(string: url) {
-                                UIApplication.shared.open(url)
+                    if let url = details.url {
+                        ToolbarItem {
+                            Link(destination: url) {
+                                Label(
+                                    "Apri nel browser",
+                                    systemImage: "arrow.up.forward.app"
+                                )
                             }
-                        } label: {
-                            Label(
-                                "Apri nel browser",
-                                systemImage: "arrow.up.forward.app"
-                            )
-                        }
-                    }
-
-                    if details.calculatedStatus == Status.open, let url = URL(string: sendApplicationUrl) {
-                        ToolbarItem(placement: .bottomBar) {
-                            Button {
-                                UIApplication.shared.open(url)
-                            } label: {
-                                Text("Invia la tua candidatura")
-                                    .frame(maxWidth: .infinity)
-                            }
-                            .controlSize(.large)
-                            .buttonStyle(.borderedProminent)
                         }
                     }
                 }
