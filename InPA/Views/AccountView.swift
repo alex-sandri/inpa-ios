@@ -48,9 +48,7 @@ struct AccountView: View {
     }
 }
 
-struct AccountView_Previews: PreviewProvider {
-    static var previews: some View {
-        AccountView()
-            .task { await InPAApp.initialize() }
-    }
+#Preview {
+    AccountView()
+        .task { await InPAApp.initialize() }
 }

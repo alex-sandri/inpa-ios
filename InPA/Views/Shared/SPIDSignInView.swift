@@ -71,8 +71,6 @@ struct SPIDSignInView: View {
     }
 }
 
-struct SPIDSignInView_Previews: PreviewProvider {
-    static var previews: some View {
-        SPIDSignInView()
-    }
+#Preview {
+    SPIDSignInView()
 }

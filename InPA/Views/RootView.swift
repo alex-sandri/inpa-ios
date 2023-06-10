@@ -28,9 +28,7 @@ struct RootView: View {
     }
 }
 
-struct RootView_Previews: PreviewProvider {
-    static var previews: some View {
-        RootView()
-            .task { await InPAApp.initialize() }
-    }
+#Preview {
+    RootView()
+        .task { await InPAApp.initialize() }
 }

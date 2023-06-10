@@ -34,9 +34,7 @@ struct CandidatureView: View {
     }
 }
 
-struct CandidatureView_Previews: PreviewProvider {
-    static var previews: some View {
-        CandidatureView()
-            .task { await InPAApp.initialize() }
-    }
+#Preview {
+    CandidatureView()
+        .task { await InPAApp.initialize() }
 }

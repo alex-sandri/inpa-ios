@@ -44,9 +44,7 @@ struct SavedForLaterView: View {
     }
 }
 
-struct SavedForLaterView_Previews: PreviewProvider {
-    static var previews: some View {
-        SavedForLaterView()
-            .task { await InPAApp.initialize() }
-    }
+#Preview {
+    SavedForLaterView()
+        .task { await InPAApp.initialize() }
 }

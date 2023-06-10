@@ -153,9 +153,7 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-            .task { await InPAApp.initialize() }
-    }
+#Preview {
+    HomeView()
+        .task { await InPAApp.initialize() }
 }
