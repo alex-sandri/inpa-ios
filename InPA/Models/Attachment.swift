@@ -13,6 +13,6 @@ struct Attachment: Codable, Identifiable {
     let label: String
 
     var url: URL? {
-        return URL(string: "https://portale.inpa.gov.it/api/media/\(mediaId)")
+        URL(string: "https://portale.inpa.gov.it/api/media/\(mediaId)")
     }
 }
