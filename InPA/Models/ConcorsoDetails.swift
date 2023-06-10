@@ -24,6 +24,14 @@ struct ConcorsoDetails: Codable, Identifiable {
     let linkSitoPA: String?
     let linkReindirizzamento: String?
     let expandedLocation: String
+    
+    var url: URL? {
+        URL(string: "https://www.inpa.gov.it/bandi-e-avvisi/dettaglio-bando-avviso/?concorso_id=\(id)")
+    }
+
+    var applicationURL: URL? {
+        URL(string: linkReindirizzamento ?? "https://portale.inpa.gov.it/ui/public-area/login?returnUrl=%2Fpublic-area%2Fconcoursedetail%2F\(id)")
+    }
 
     var fromDate: Date? {
         return ISO8601DateFormatter().date(from: dataPubblicazione)
