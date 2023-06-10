@@ -65,7 +65,7 @@
 		908EF7B32A2B5F3B006D8D46 /* AuthStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStateView.swift; sourceTree = "<group>"; };
 		908EF7B52A2B617F006D8D46 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		908EF7B72A2B6250006D8D46 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		9093AE942A18E492005D26F1 /* InPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9093AE942A18E492005D26F1 /* inPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9093AE972A18E492005D26F1 /* InPAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InPAApp.swift; sourceTree = "<group>"; };
 		9093AE992A18E492005D26F1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9093AE9B2A18E493005D26F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		9093AE952A18E492005D26F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9093AE942A18E492005D26F1 /* InPA.app */,
+				9093AE942A18E492005D26F1 /* inPA.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,9 +215,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9093AE932A18E492005D26F1 /* InPA */ = {
+		9093AE932A18E492005D26F1 /* inPA */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9093AEA22A18E493005D26F1 /* Build configuration list for PBXNativeTarget "InPA" */;
+			buildConfigurationList = 9093AEA22A18E493005D26F1 /* Build configuration list for PBXNativeTarget "inPA" */;
 			buildPhases = (
 				9093AE902A18E492005D26F1 /* Sources */,
 				9093AE912A18E492005D26F1 /* Frameworks */,
@@ -227,12 +227,12 @@
 			);
 			dependencies = (
 			);
-			name = InPA;
+			name = inPA;
 			packageProductDependencies = (
 				90AF80872A27682900958D07 /* KeychainAccess */,
 			);
 			productName = InPA;
-			productReference = 9093AE942A18E492005D26F1 /* InPA.app */;
+			productReference = 9093AE942A18E492005D26F1 /* inPA.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -266,7 +266,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9093AE932A18E492005D26F1 /* InPA */,
+				9093AE932A18E492005D26F1 /* inPA */,
 			);
 		};
 /* End PBXProject section */
@@ -519,7 +519,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9093AEA22A18E493005D26F1 /* Build configuration list for PBXNativeTarget "InPA" */ = {
+		9093AEA22A18E493005D26F1 /* Build configuration list for PBXNativeTarget "inPA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9093AEA32A18E493005D26F1 /* Debug */,
