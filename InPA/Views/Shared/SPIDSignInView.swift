@@ -12,7 +12,6 @@ import SwiftUI
 
 struct SPIDSignInView: View {
     @State private var isWebViewLoading = true
-    @State private var showSignInWebView = false
 
     @Environment(\.dismiss) private var dismiss
     @Environment(\.colorScheme) private var colorScheme
@@ -26,8 +25,6 @@ struct SPIDSignInView: View {
                             try? SPIDSignInWebView(idp: provider) {
                                 isWebViewLoading = false
                             } didSignIn: { accessToken in
-                                showSignInWebView = false
-
                                 await AuthStore.shared.setAccessToken(accessToken)
 
                                 dismiss()
