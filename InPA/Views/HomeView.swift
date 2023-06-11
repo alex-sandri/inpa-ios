@@ -21,6 +21,8 @@ struct HomeView: View {
 
     @State private var authStore = AuthStore.shared
 
+    @Environment(\.openWindow) private var openWindow
+
     func getConcorsi(page: Int = 0, reset: Bool = false) async {
         if reset {
             concorsi = nil
@@ -130,6 +132,16 @@ struct HomeView: View {
                 }
 
                 if !authStore.isSignedIn {
+                    #if os(macOS)
+                    Button {
+                        openWindow(id: "sign-in")
+                    } label: {
+                        Label(
+                            "Accedi",
+                            systemImage: "person.crop.circle"
+                        )
+                    }
+                    #else
                     NavigationLink {
                         SPIDSignInView()
                     } label: {
@@ -138,6 +150,7 @@ struct HomeView: View {
                             systemImage: "person.crop.circle"
                         )
                     }
+                    #endif
                 }
             }
             .sheet(isPresented: $showFilters) {

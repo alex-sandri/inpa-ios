@@ -23,5 +23,11 @@ struct InPAApp: App {
             RootView()
                 .task { await InPAApp.initialize() }
         }
+
+        #if os(macOS)
+        Window("Accedi con SPID", id: "sign-in") {
+            SPIDSignInView()
+        }
+        #endif
     }
 }
