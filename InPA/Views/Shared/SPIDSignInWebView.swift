@@ -82,6 +82,7 @@ struct SPIDSignInWebView: WebViewRepresentable {
         Coordinator(parent: self)
     }
 
+    @MainActor
     class Coordinator: NSObject, WKNavigationDelegate {
         let parent: SPIDSignInWebView
 
@@ -103,7 +104,7 @@ struct SPIDSignInWebView: WebViewRepresentable {
             return .allow
         }
 
-        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation) {
+        nonisolated func webView(_ webView: WKWebView, didFinish navigation: WKNavigation) {
             parent.didFinishLoading()
         }
     }
