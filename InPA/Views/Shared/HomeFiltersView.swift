@@ -208,14 +208,18 @@ struct HomeFiltersView: View {
             Section(header: Text("Salario")) {
                 LabeledContent("Da") {
                     TextField("€", text: $minSalary)
+                        #if os(iOS)
                         .keyboardType(.numberPad)
+                        #endif
                         .onChange(of: minSalary) { _, newValue in
                             minSalary = newValue.filter { $0.isNumber }
                         }
                 }
                 LabeledContent("A") {
                     TextField("€", text: $maxSalary)
+                        #if os(iOS)
                         .keyboardType(.numberPad)
+                        #endif
                         .onChange(of: maxSalary) { _, newValue in
                             maxSalary = newValue.filter { $0.isNumber }
                         }

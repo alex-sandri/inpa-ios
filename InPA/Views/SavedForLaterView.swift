@@ -32,7 +32,9 @@ struct SavedForLaterView: View {
                             }
                         }
                     }
+                    #if os(iOS)
                     .listStyle(.grouped)
+                    #endif
                     .scrollContentBackground(.hidden)
                 } else {
                     Text("Non hai ancora salvato niente per dopo")

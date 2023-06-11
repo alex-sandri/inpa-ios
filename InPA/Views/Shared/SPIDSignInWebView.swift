@@ -8,11 +8,17 @@
 import SwiftUI
 import WebKit
 
+#if os(iOS)
+typealias WebViewRepresentable = UIViewRepresentable
+#elseif os(macOS)
+typealias WebViewRepresentable = NSViewRepresentable
+#endif
+
 enum SPIDSignInWebViewError: Error {
     case invalidUrl
 }
 
-struct SPIDSignInWebView: UIViewRepresentable {
+struct SPIDSignInWebView: WebViewRepresentable {
     let url: URL
 
     let didFinishLoading: () -> Void?
@@ -36,8 +42,8 @@ struct SPIDSignInWebView: UIViewRepresentable {
 
         self.didSignIn = didSignIn
     }
-
-    func makeUIView(context: Context) -> WKWebView {
+    
+    func makeView(context: Context) -> WKWebView {
         let configuration = WKWebViewConfiguration()
         configuration.websiteDataStore = .nonPersistent()
 
@@ -47,10 +53,30 @@ struct SPIDSignInWebView: UIViewRepresentable {
         return webView
     }
 
-    func updateUIView(_ webView: WKWebView, context: Context) {
+    func updateView(_ webView: WKWebView, context: Context) {
         let request = URLRequest(url: url)
         webView.load(request)
     }
+
+    #if os(iOS)
+    func makeUIView(context: Context) -> WKWebView {
+        makeView(context: context)
+    }
+
+    func updateUIView(_ webView: WKWebView, context: Context) {
+        updateView(webView, context: context)
+    }
+    #endif
+
+    #if os(macOS)
+    func makeNSView(context: Context) -> WKWebView {
+        makeView(context: context)
+    }
+
+    func updateNSView(_ webView: WKWebView, context: Context) {
+        updateView(webView, context: context)
+    }
+    #endif
 
     func makeCoordinator() -> Coordinator {
         Coordinator(parent: self)
