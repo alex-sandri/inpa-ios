@@ -86,15 +86,24 @@ struct HomeView: View {
                     }
                 }
             }
+            #if os(iOS)
             .listStyle(.grouped)
+            #endif
             .scrollContentBackground(.hidden)
             .refreshable {
                 await getConcorsi(reset: true)
             }
+            #if os(macOS)
+            .searchable(
+                text: $query,
+                placement: .toolbar
+            )
+            #else
             .searchable(
                 text: $query,
                 placement: .navigationBarDrawer(displayMode: .always)
             )
+            #endif
             .onChange(of: query) {
                 searchTask?.cancel()
 
