@@ -10,6 +10,7 @@ import os
 
 enum JsonParserError: Error {
     case invalidUrl
+    case malformedObject
     case missingAuth
 }
 
@@ -51,12 +52,24 @@ struct JsonParser<T: Decodable> {
 
         let (data, _) = try await URLSession.shared.data(for: request)
 
-        return try parse(data)
+        guard let object = parse(data) else {
+            throw JsonParserError.malformedObject
+        }
+
+        return object
     }
 
-    func parse(_ data: Data) throws -> T {
+    func parse(_ data: Data) -> T? {
         let decoder = JSONDecoder()
 
-        return try decoder.decode(T.self, from: data)
+        var object: T? = nil
+
+        do {
+            object = try decoder.decode(T.self, from: data)
+        } catch {
+            print(error)
+        }
+
+        return object
     }
 }
