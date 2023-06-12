@@ -14,6 +14,7 @@ struct HomeView: View {
     @State private var filters: Filters = Filters()
 
     @State private var concorsi: Concorsi? = nil
+    @State private var selectedConcorsoId: String?
 
     @State private var searchTask: Task<(), Error>?
 
@@ -42,8 +43,8 @@ struct HomeView: View {
     }
 
     var body: some View {
-        NavigationStack {
-            List {
+        NavigationSplitView {
+            List(selection: $selectedConcorsoId) {
                 if let concorsi {
                     if concorsi.content.isEmpty {
                         Text("Non sono stati trovati risultati")
@@ -56,9 +57,7 @@ struct HomeView: View {
                     }
 
                     ForEach(concorsi.content) { concorso in
-                        NavigationLink {
-                            ConcorsoDetailsView(id: concorso.id)
-                        } label: {
+                        NavigationLink(value: concorso.id) {
                             ConcorsoRow(concorso)
                         }
                     }
@@ -170,6 +169,13 @@ struct HomeView: View {
                 if concorsi == nil {
                     await getConcorsi(reset: true)
                 }
+            }
+        } detail: {
+            if let selectedConcorsoId {
+                ConcorsoDetailsView(id: selectedConcorsoId)
+                    .id(selectedConcorsoId)
+            } else {
+                Text("Seleziona un concorso per vederne i dettagli")
             }
         }
     }

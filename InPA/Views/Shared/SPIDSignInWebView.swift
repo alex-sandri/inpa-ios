@@ -42,7 +42,7 @@ struct SPIDSignInWebView: WebViewRepresentable {
 
         self.didSignIn = didSignIn
     }
-    
+
     func makeView(context: Context) -> WKWebView {
         let configuration = WKWebViewConfiguration()
         configuration.websiteDataStore = .nonPersistent()
