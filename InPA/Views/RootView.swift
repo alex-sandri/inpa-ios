@@ -30,5 +30,6 @@ struct RootView: View {
 
 #Preview {
     RootView()
+        .font(Font.custom("Titillium Web", size: 18))
         .task { await InPAApp.initialize() }
 }

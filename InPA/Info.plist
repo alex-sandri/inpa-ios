@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Fonts/Titillium Web/TitilliumWeb-Black.ttf</string>
+		<string>Fonts/Titillium Web/TitilliumWeb-Bold.ttf</string>
+		<string>Fonts/Titillium Web/TitilliumWeb-BoldItalic.ttf</string>
+		<string>Fonts/Titillium Web/TitilliumWeb-ExtraLight.ttf</string>
+		<string>Fonts/Titillium Web/TitilliumWeb-ExtraLightItalic.ttf</string>
+		<string>Fonts/Titillium Web/TitilliumWeb-Italic.ttf</string>
+		<string>Fonts/Titillium Web/TitilliumWeb-Light.ttf</string>
+		<string>Fonts/Titillium Web/TitilliumWeb-LightItalic.ttf</string>
+		<string>Fonts/Titillium Web/TitilliumWeb-Regular.ttf</string>
+		<string>Fonts/Titillium Web/TitilliumWeb-SemiBold.ttf</string>
+		<string>Fonts/Titillium Web/TitilliumWeb-SemiBoldItalic.ttf</string>
+	</array>
+</dict>
+</plist>

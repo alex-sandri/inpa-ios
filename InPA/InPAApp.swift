@@ -21,6 +21,7 @@ struct InPAApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
+                .font(Font.custom("Titillium Web", size: 18))
                 .task { await InPAApp.initialize() }
         }
 
