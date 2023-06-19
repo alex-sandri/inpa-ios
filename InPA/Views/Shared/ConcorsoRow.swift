@@ -16,7 +16,7 @@ struct ConcorsoRow: View {
 
     var body: some View {
         let statusForegroundColor: Color = concorso.calculatedStatus == Status.open ? .white : .white
-        let statusBackgroundColor = concorso.calculatedStatus == Status.open ? Color.accentColor : .red
+        let statusBackgroundColor = concorso.calculatedStatus == Status.open ? Color("AccentColor") : .red
 
         VStack(alignment: .leading) {
             Text(concorso.calculatedStatus.displayName().uppercased())
