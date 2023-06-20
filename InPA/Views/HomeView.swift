@@ -48,11 +48,11 @@ struct HomeView: View {
                 if let concorsi {
                     if concorsi.content.isEmpty {
                         Text("Non sono stati trovati risultati")
-                            .font(.caption)
+                            .font(Fonts.default.caption)
                             .foregroundColor(.secondary)
                     } else {
                         Text("Trovati **\(concorsi.totalElements)** risultati")
-                            .font(.caption)
+                            .font(Fonts.default.caption)
                             .foregroundColor(.secondary)
                     }
 

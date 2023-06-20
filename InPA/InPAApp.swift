@@ -21,14 +21,14 @@ struct InPAApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
-                .font(.custom("Titillium Web", size: 18))
+                .font(Fonts.default.body)
                 .task { await InPAApp.initialize() }
         }
 
         #if os(macOS)
         Window("Accedi con SPID", id: "sign-in") {
             SPIDSignInView()
-                .font(.custom("Titillium Web", size: 18))
+                .font(Fonts.default.body)
         }
         #endif
     }

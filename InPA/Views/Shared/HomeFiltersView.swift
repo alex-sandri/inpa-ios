@@ -118,53 +118,55 @@ struct HomeFiltersView: View {
 
     var body: some View {
         Form {
+            Text("Filtri")
+                .font(Fonts.default.largeTitle)
+                .fontWeight(.bold)
+                .listRowBackground(Color.clear)
+                .listRowInsets(EdgeInsets())
+
             Section {
-                Text("Filtri")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .listRowBackground(Color.clear)
-                    .listRowInsets(EdgeInsets())
-            }
-            Picker(
-                selection: $selectedCategory,
-                label: Text("Categoria")
-            ) {
-                Text("Tutte").tag("0")
-                ForEach(categories) { category in
-                    Text(category.name).tag(category.id)
+                Picker(
+                    selection: $selectedCategory,
+                    label: Text("Categoria")
+                ) {
+                    Text("Tutte").tag("0")
+                    ForEach(categories) { category in
+                        Text(category.name).tag(category.id)
+                    }
+                }
+                Picker(
+                    selection: $selectedGeographicArea,
+                    label: Text("Area geografica")
+                ) {
+                    Text("Tutte").tag("0")
+                    ForEach(geographicAreas) { geographicArea in
+                        Text(geographicArea.denominazione).tag(geographicArea.id)
+                    }
+                }
+                Picker(
+                    selection: $selectedStatus,
+                    label: Text("Stato")
+                ) {
+                    ForEach(Status.allCases) { status in
+                        Text(status.displayName()).tag(status)
+                    }
+                }
+                .onAppear {
+                    // I'm using .onAppear as otherwise this wouldn't work inside init() for some reason
+                    selectedStatus = filters.status ?? Status.all
+                }
+                Picker(
+                    selection: $selectedSector,
+                    label: Text("Settore")
+                ) {
+                    Text("Tutti").tag("0")
+                    ForEach(sectors) { sector in
+                        Text(sector.name).tag(sector.id)
+                    }
                 }
             }
-            Picker(
-                selection: $selectedGeographicArea,
-                label: Text("Area geografica")
-            ) {
-                Text("Tutte").tag("0")
-                ForEach(geographicAreas) { geographicArea in
-                    Text(geographicArea.denominazione).tag(geographicArea.id)
-                }
-            }
-            Picker(
-                selection: $selectedStatus,
-                label: Text("Stato")
-            ) {
-                ForEach(Status.allCases) { status in
-                    Text(status.displayName()).tag(status)
-                }
-            }
-            .onAppear {
-                // I'm using .onAppear as otherwise this wouldn't work inside init() for some reason
-                selectedStatus = filters.status ?? Status.all
-            }
-            Picker(
-                selection: $selectedSector,
-                label: Text("Settore")
-            ) {
-                Text("Tutti").tag("0")
-                ForEach(sectors) { sector in
-                    Text(sector.name).tag(sector.id)
-                }
-            }
-            Section(header: Text("Periodo di pubblicazione")) {
+
+            Section {
                 if didSetFromDate {
                     DatePicker(
                         selection: $fromDate,
@@ -200,12 +202,15 @@ struct HomeFiltersView: View {
                         }
                     }
                 }
+            } header: {
+                Text("Periodo di pubblicazione")
+                    .font(Fonts.default.subheadline)
             }
             .onAppear {
                 didSetFromDate = filters.fromDate != nil
                 didSetToDate = filters.toDate != nil
             }
-            Section(header: Text("Salario")) {
+            Section {
                 LabeledContent("Da") {
                     TextField("€", text: $minSalary)
                         #if os(iOS)
@@ -224,6 +229,9 @@ struct HomeFiltersView: View {
                             maxSalary = newValue.filter { $0.isNumber }
                         }
                 }
+            } header: {
+                Text("Salario")
+                    .font(Fonts.default.subheadline)
             }
             Button {
                 dismissAndUpdate()
@@ -260,5 +268,6 @@ struct HomeFiltersView: View {
     let filters = Filters()
 
     return HomeFiltersView(filters: .constant(filters))
+        .font(Fonts.default.body)
         .task { await InPAApp.initialize() }
 }

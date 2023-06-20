@@ -14,13 +14,16 @@ struct AccountView: View {
         NavigationStack {
             List {
                 if let user = authStore.user {
-                    Section("Dettagli") {
+                    Section {
                         LabeledContent("Nome", value: user.firstName)
                         LabeledContent("Cognome", value: user.lastName)
                         LabeledContent("Email", value: user.email)
+                    } header: {
+                        Text("Dettagli")
+                            .font(Fonts.default.subheadline)
                     }
 
-                    Section("Candidature") {
+                    Section {
                         ForEach(CandidaturaType.allCases) { type in
                             NavigationLink {
                                 CandidatureView(type: type)
@@ -28,6 +31,9 @@ struct AccountView: View {
                                 Label(type.displayName, systemImage: type.systemImage)
                             }
                         }
+                    } header: {
+                        Text("Candidature")
+                            .font(Fonts.default.subheadline)
                     }
                 }
             }

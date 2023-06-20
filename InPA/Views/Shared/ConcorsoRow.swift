@@ -20,7 +20,7 @@ struct ConcorsoRow: View {
 
         VStack(alignment: .leading) {
             Text(concorso.calculatedStatus.displayName().uppercased())
-                .font(.system(size: 10))
+                .font(Fonts.default.with(size: 10))
                 .foregroundColor(statusForegroundColor)
                 .padding(4)
                 .background(statusBackgroundColor)
@@ -37,7 +37,7 @@ struct ConcorsoRow: View {
                 Text("**Data apertura candidature:** \(concorso.fromDateFormatted)")
                 Text("**Data chiusura candidature:** \(concorso.toDateFormatted)")
             }
-            .font(.caption)
+            .font(Fonts.default.caption)
             .foregroundColor(.secondary)
         }
     }

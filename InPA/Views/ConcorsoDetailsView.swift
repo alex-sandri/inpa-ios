@@ -24,8 +24,11 @@ struct ConcorsoDetailsView: View {
         NavigationStack {
             if let details {
                 List {
-                    Section("Descrizione") {
+                    Section {
                         Text(details.descrizioneBreve)
+                    } header: {
+                        Text("Descrizione")
+                            .font(Fonts.default.subheadline)
                     }
 
                     Section {
@@ -57,7 +60,7 @@ struct ConcorsoDetailsView: View {
                         .listRowInsets(EdgeInsets())
                     }
 
-                    Section("Bando/Avviso e Allegati") {
+                    Section {
                         if details.allegati.isEmpty {
                             Text("Non ci sono allegati da mostrare")
                         }
@@ -67,6 +70,9 @@ struct ConcorsoDetailsView: View {
                                 Link(attachment.label, destination: url)
                             }
                         }
+                    } header: {
+                        Text("Bando/Avviso e Allegati")
+                            .font(Fonts.default.subheadline)
                     }
                 }
                 .toolbar {
