@@ -103,6 +103,9 @@ struct ConcorsoDetailsView: View {
                                     systemImage: "arrow.up.forward.app"
                                 )
                             }
+                            #if os(macOS)
+                            .buttonStyle(.bordered)
+                            #endif
                         }
                     }
                 }
