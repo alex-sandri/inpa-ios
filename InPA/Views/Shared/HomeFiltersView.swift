@@ -258,6 +258,9 @@ struct HomeFiltersView: View {
             .listRowBackground(Color.clear)
             .padding(.top, 10)
         }
+        #if os(macOS)
+        .padding()
+        #endif
         .task {
             await initialize()
         }
