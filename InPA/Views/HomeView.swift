@@ -129,6 +129,11 @@ struct HomeView: View {
                         systemImage: "line.3.horizontal.decrease.circle"
                     )
                 }
+                #if os(macOS)
+                .popover(isPresented: $showFilters) {
+                    HomeFiltersView(filters: $filters)
+                }
+                #endif
 
                 NavigationLink {
                     SavedForLaterView()
@@ -161,9 +166,11 @@ struct HomeView: View {
                     #endif
                 }
             }
+            #if os(iOS)
             .sheet(isPresented: $showFilters) {
                 HomeFiltersView(filters: $filters)
             }
+            #endif
             .task {
                 // Load only if not loaded before
                 if concorsi == nil {
