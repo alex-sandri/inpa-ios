@@ -44,6 +44,7 @@
 		90A633352A1B9ED70010D452 /* HomeFiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A633342A1B9ED70010D452 /* HomeFiltersView.swift */; };
 		90A633372A1B9F4E0010D452 /* ConcorsoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A633362A1B9F4E0010D452 /* ConcorsoRow.swift */; };
 		90A6333A2A1BDE8B0010D452 /* SelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A633392A1BDE8B0010D452 /* SelectionType.swift */; };
+		90A63E0D2A3F6CFA00E0E98E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A63E0C2A3F6CFA00E0E98E /* Fonts.swift */; };
 		90AF80832A27503F00958D07 /* AuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AF80822A27503F00958D07 /* AuthStore.swift */; };
 		90AF80882A27682900958D07 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 90AF80872A27682900958D07 /* KeychainAccess */; };
 		90B983362A1F88BE00B986BF /* SPIDIdentityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B983352A1F88BE00B986BF /* SPIDIdentityProvider.swift */; };
@@ -98,6 +99,7 @@
 		90A633342A1B9ED70010D452 /* HomeFiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFiltersView.swift; sourceTree = "<group>"; };
 		90A633362A1B9F4E0010D452 /* ConcorsoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcorsoRow.swift; sourceTree = "<group>"; };
 		90A633392A1BDE8B0010D452 /* SelectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionType.swift; sourceTree = "<group>"; };
+		90A63E0C2A3F6CFA00E0E98E /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		90AF80822A27503F00958D07 /* AuthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStore.swift; sourceTree = "<group>"; };
 		90B983352A1F88BE00B986BF /* SPIDIdentityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPIDIdentityProvider.swift; sourceTree = "<group>"; };
 		90B983372A1F90AA00B986BF /* SPIDSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPIDSignInView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				908404482A36280B00982B40 /* Titillium Web */,
+				90A63E0C2A3F6CFA00E0E98E /* Fonts.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
