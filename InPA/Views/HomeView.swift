@@ -43,7 +43,7 @@ struct HomeView: View {
     }
 
     var body: some View {
-        NavigationSplitView {
+        NavigationSplitView(columnVisibility: .constant(.all)) {
             List(selection: $selectedConcorsoId) {
                 if let concorsi {
                     if concorsi.content.isEmpty {
@@ -193,6 +193,7 @@ struct HomeView: View {
                 Text("Seleziona un concorso per vederne i dettagli")
             }
         }
+        .navigationSplitViewStyle(.balanced)
     }
 }
 
