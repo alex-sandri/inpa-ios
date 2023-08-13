@@ -15,8 +15,19 @@ struct ConcorsoRow: View {
     }
 
     var body: some View {
-        let statusForegroundColor: Color = concorso.calculatedStatus == Status.open ? .white : .white
-        let statusBackgroundColor = concorso.calculatedStatus == Status.open ? Color("AccentColor") : .red
+        let statusForegroundColor: Color = switch concorso.calculatedStatus {
+        default:
+            .white
+        }
+
+        let statusBackgroundColor: Color = switch concorso.calculatedStatus {
+        case .open:
+            Color("AccentColor")
+        case .visible:
+            .orange
+        default:
+            .red
+        }
 
         VStack(alignment: .leading) {
             Text(concorso.calculatedStatus.displayName().uppercased())
