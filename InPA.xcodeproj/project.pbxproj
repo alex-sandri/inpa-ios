@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		900651BA2A40CF2500D9F565 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 900651B92A40CF2500D9F565 /* KeychainAccess */; };
 		900E77EF2A2CBD680037B491 /* CandidatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E77EE2A2CBD680037B491 /* CandidatureView.swift */; };
 		900E77F12A2CBD9A0037B491 /* CandidaturaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E77F02A2CBD9A0037B491 /* CandidaturaType.swift */; };
 		901F57C12A1D1BE200FCA444 /* SavedForLaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901F57C02A1D1BE200FCA444 /* SavedForLaterView.swift */; };
@@ -46,7 +47,6 @@
 		90A6333A2A1BDE8B0010D452 /* SelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A633392A1BDE8B0010D452 /* SelectionType.swift */; };
 		90A63E0D2A3F6CFA00E0E98E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A63E0C2A3F6CFA00E0E98E /* Fonts.swift */; };
 		90AF80832A27503F00958D07 /* AuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AF80822A27503F00958D07 /* AuthStore.swift */; };
-		90AF80882A27682900958D07 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 90AF80872A27682900958D07 /* KeychainAccess */; };
 		90B983362A1F88BE00B986BF /* SPIDIdentityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B983352A1F88BE00B986BF /* SPIDIdentityProvider.swift */; };
 		90B983382A1F90AA00B986BF /* SPIDSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B983372A1F90AA00B986BF /* SPIDSignInView.swift */; };
 		90F29D9B2A1A7D95003A3161 /* GeographicArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F29D9A2A1A7D95003A3161 /* GeographicArea.swift */; };
@@ -117,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90AF80882A27682900958D07 /* KeychainAccess in Frameworks */,
+				900651BA2A40CF2500D9F565 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +286,7 @@
 			);
 			name = inPA;
 			packageProductDependencies = (
-				90AF80872A27682900958D07 /* KeychainAccess */,
+				900651B92A40CF2500D9F565 /* KeychainAccess */,
 			);
 			productName = InPA;
 			productReference = 9093AE942A18E492005D26F1 /* inPA.app */;
@@ -317,7 +317,7 @@
 			);
 			mainGroup = 9093AE8B2A18E492005D26F1;
 			packageReferences = (
-				90AF80862A27682900958D07 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				900651B82A40CF2500D9F565 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 9093AE952A18E492005D26F1 /* Products */;
 			projectDirPath = "";
@@ -381,6 +381,7 @@
 				9093AE982A18E492005D26F1 /* InPAApp.swift in Sources */,
 				90F29DA12A1A8D2E003A3161 /* Status.swift in Sources */,
 				90F29D9B2A1A7D95003A3161 /* GeographicArea.swift in Sources */,
+				90A63E0D2A3F6CFA00E0E98E /* Fonts.swift in Sources */,
 				90F29D9F2A1A8BF2003A3161 /* CategoryFeatures.swift in Sources */,
 				900E77EF2A2CBD680037B491 /* CandidatureView.swift in Sources */,
 				90F29D9D2A1A8B75003A3161 /* Category.swift in Sources */,
@@ -604,7 +605,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		90AF80862A27682900958D07 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+		900651B82A40CF2500D9F565 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
 			requirement = {
@@ -615,9 +616,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		90AF80872A27682900958D07 /* KeychainAccess */ = {
+		900651B92A40CF2500D9F565 /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 90AF80862A27682900958D07 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			package = 900651B82A40CF2500D9F565 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */
