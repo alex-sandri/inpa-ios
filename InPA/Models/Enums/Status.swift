@@ -13,6 +13,7 @@ enum Status: String, CaseIterable, Codable, Identifiable {
     case all = "ALL"
     case closed = "CLOSED"
     case open = "OPEN"
+    case visible = "VISIBLE"
 
     func displayName() -> String {
         switch self {
@@ -22,6 +23,8 @@ enum Status: String, CaseIterable, Codable, Identifiable {
             return "Chiuso"
         case .open:
             return "Aperto"
+        case .visible:
+            return "In apertura"
         }
     }
 
@@ -29,10 +32,8 @@ enum Status: String, CaseIterable, Codable, Identifiable {
         switch self {
         case .all:
             return ["CLOSED", "OPEN"]
-        case .closed:
-            return ["CLOSED"]
-        case .open:
-            return ["OPEN"]
+        default:
+            return [self.rawValue]
         }
     }
 }
