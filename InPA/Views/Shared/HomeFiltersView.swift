@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HomeFiltersView: View {
-    @Binding var filters: Filters
+    let filters: Filters
+    let didFilter: (Filters) -> Void
 
     @State private var selectedCategory = "0"
     @State private var categories: [Category] = []
@@ -29,12 +30,6 @@ struct HomeFiltersView: View {
 
     @State private var minSalary = ""
     @State private var maxSalary = ""
-
-    @Environment(\.dismiss) private var dismiss
-
-    init(filters: Binding<Filters>) {
-        _filters = filters
-    }
 
     func setCategories(_ categories: [Category], selected: String?) {
         self.categories = categories
@@ -88,32 +83,34 @@ struct HomeFiltersView: View {
     }
 
     func dismissAndUpdate() {
-        filters.category = categories.first(where: { $0.id == selectedCategory })
-        filters.geographicArea = geographicAreas.first(where: { $0.id == selectedGeographicArea })
-        filters.status = selectedStatus
-        filters.sector = sectors.first(where: { $0.id == selectedSector })
+        var newFilters = Filters()
+
+        newFilters.category = categories.first(where: { $0.id == selectedCategory })
+        newFilters.geographicArea = geographicAreas.first(where: { $0.id == selectedGeographicArea })
+        newFilters.status = selectedStatus
+        newFilters.sector = sectors.first(where: { $0.id == selectedSector })
 
         if didSetFromDate {
-            filters.fromDate = fromDate
+            newFilters.fromDate = fromDate
         }
 
         if didSetToDate {
-            filters.toDate = toDate
+            newFilters.toDate = toDate
         }
 
         if let minSalary = Int(minSalary) {
-            filters.minSalary = minSalary
+            newFilters.minSalary = minSalary
         } else if minSalary.isEmpty {
-            filters.minSalary = nil
+            newFilters.minSalary = nil
         }
 
         if let maxSalary = Int(maxSalary) {
-            filters.maxSalary = maxSalary
+            newFilters.maxSalary = maxSalary
         } else if maxSalary.isEmpty {
-            filters.maxSalary = nil
+            newFilters.maxSalary = nil
         }
 
-        dismiss()
+        didFilter(newFilters)
     }
 
     var body: some View {
@@ -244,8 +241,7 @@ struct HomeFiltersView: View {
             .listRowInsets(EdgeInsets())
             .listRowBackground(Color.clear)
             Button {
-                filters = Filters()
-                dismiss()
+                didFilter(Filters())
             } label: {
                 Text("Ripristina")
                     .frame(maxWidth: .infinity)
@@ -270,7 +266,9 @@ struct HomeFiltersView: View {
 #Preview {
     let filters = Filters()
 
-    return HomeFiltersView(filters: .constant(filters))
+    return HomeFiltersView(filters: filters) { filters in
+        print(filters)
+    }
         .font(Fonts.default.body)
         .task { await InPAApp.initialize() }
 }

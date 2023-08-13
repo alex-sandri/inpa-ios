@@ -131,7 +131,11 @@ struct HomeView: View {
                 }
                 #if os(macOS)
                 .popover(isPresented: $showFilters) {
-                    HomeFiltersView(filters: $filters)
+                    HomeFiltersView(filters: filters) { newFilters in
+                        showFilters.toggle()
+
+                        filters = newFilters
+                    }
                 }
                 #endif
 
@@ -168,7 +172,11 @@ struct HomeView: View {
             }
             #if os(iOS)
             .sheet(isPresented: $showFilters) {
-                HomeFiltersView(filters: $filters)
+                HomeFiltersView(filters: filters) { newFilters in
+                    showFilters.toggle()
+
+                    filters = newFilters
+                }
             }
             #endif
             .task {
